@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'dev.fuelyour.injectjava'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.4.0')
+    testCompile('org.hamcrest:hamcrest-library:1.3')
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
